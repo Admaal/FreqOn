@@ -1,0 +1,31 @@
+{
+  "name": "festivalmusica",
+  "version": "1.0.0",
+  "description": "Aprendiendo SASS y NPM",
+  "type": "module",
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Gulp"
+  ],
+  "homepage": "https://github.com/Admaal/FreqOn#readme",
+  "bugs": {
+    "url": "https://github.com/Admaal/FreqOn/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Admaal/FreqOn.git"
+  },
+  "license": "ISC",
+  "author": "Admaal",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "gulp dev"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.89.2"
+  }
+}
