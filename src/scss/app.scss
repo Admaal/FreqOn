@@ -1,19 +1,2 @@
-@use "variables" as *;
-
-body {
-  font-family: $Fuente_principal;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-h1 {
-  font-family: $Fuente_principal;
-}
-
-p {
-  font-family: $Fuente_principal;
-}
-
-a {
-  font-family: $Fuente_principal;
-}
+@forward "base";
+@forward "layout";
