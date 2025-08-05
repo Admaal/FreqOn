@@ -21,11 +21,15 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch src/scss:build/css",
-    "dev": "gulp"
+    "dev": "gulp",
+    "build": "gulp crop js css imagenes"
   },
   "devDependencies": {
+    "glob": "^11.0.3",
     "gulp": "^5.0.1",
     "gulp-sass": "^6.0.1",
-    "sass": "^1.89.2"
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.89.2",
+    "sharp": "^0.34.3"
   }
 }
