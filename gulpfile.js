@@ -10,6 +10,11 @@ const sass = gulpSass(dartSass);
 import terser from "gulp-terser";
 import sharp from "sharp";
 
+export function html(done) {
+  src("index.html").pipe(dest("build"));
+  done();
+}
+
 export function js(done) {
   src("src/js/app.js").pipe(terser()).pipe(dest("build/js"));
   done();
@@ -17,13 +22,8 @@ export function js(done) {
 
 export function css(done) {
   src("src/scss/app.scss", { sourcemaps: true })
-    .pipe(sass({ style: "compressed" }).on("error", sass.logError))
+    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(dest("build/css", { sourcemaps: true }));
-  done();
-}
-
-export function html(done) {
-  src("index.html").pipe(dest("build"));
   done();
 }
 
@@ -90,6 +90,7 @@ export function dev() {
   watch("src/scss/**/*.scss", css);
   watch("src/js/**/*.js", js);
   watch("src/img/**/*.{png, jpg}", imagenes);
+  watch("index.html", html);
 }
 
-export default series(crop, js, css, imagenes, dev);
+export default series(crop, js, css, imagenes, html, dev);
