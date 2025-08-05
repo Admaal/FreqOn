@@ -22,6 +22,11 @@ export function css(done) {
   done();
 }
 
+export function html(done) {
+  src("index.html").pipe(dest("build"));
+  done();
+}
+
 // Image cropping task
 export async function crop(done) {
   const inputFolder = "src/img/gallery/full";

@@ -22,7 +22,7 @@
   "scripts": {
     "sass": "sass --watch src/scss:build/css",
     "dev": "gulp",
-    "build": "gulp crop js css imagenes"
+    "build": "gulp crop js css imagenes html"
   },
   "devDependencies": {
     "glob": "^11.0.3",
